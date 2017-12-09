@@ -4,7 +4,7 @@ repeat diving first to second while remainder is not zero
 gcd - last nonzero remainder
 '''
 
-def euclidean(a, b):
+def euclide\an(a, b):
 	
 	# initialize first and second
 	first, second = a, b
