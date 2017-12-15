@@ -9,7 +9,7 @@ import math
 pen = Pen()
 screen = Screen()
 
-pen.speed(100)
+pen.speed(0)
 pen.color("blue")
 pen.width(3)
 
@@ -40,7 +40,7 @@ def fern(n, l):
 	
 	pen.backward(2*l)
 	
-fern(8, 200)
+fern(5, 200)
 	
 	
 	
