@@ -50,5 +50,5 @@ def randomCircle():
 	
 	pen.end_fill()
 
-snail(50)
+spiral(360)
 	

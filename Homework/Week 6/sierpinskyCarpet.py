@@ -49,4 +49,4 @@ def sierpinskyCarpet(n, l):
 	
 	
 	
-sierpinskyCarpet(10, 12)
+sierpinskyCarpet(4, 12)

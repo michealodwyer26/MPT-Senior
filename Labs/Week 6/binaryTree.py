@@ -71,4 +71,4 @@ def flake(n, l):
 	k(n, l); pen.right(120)
 	k(n, l); pen.right(120)
 	
-tree4(30, 200)
+
