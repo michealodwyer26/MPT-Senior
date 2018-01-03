@@ -40,15 +40,15 @@ BMILabel.grid(row=3, column=0, rowspan=1, columnspan=1)
 
 weightVar = StringVar()
 weightEntry = Entry(root, textvariable=weightVar)
-weightEntry.grid(row=1, column=1, rowspan=1, columnspan=1)
+weightEntry.grid(row=1, column=1, rowspan=1, columnspan=2)
 
 heightVar = StringVar()
 heightEntry = Entry(root, textvariable=heightVar)
-heightEntry.grid(row=2, column=1, rowspan=1, columnspan=1)
+heightEntry.grid(row=2, column=1, rowspan=1, columnspan=2)
 
 BMIVar = StringVar();
 BMICalculationLabel = Label(root, textvariable=BMIVar)
-BMICalculationLabel.grid(row=3, column=1, rowspan=1, columnspan=1)
+BMICalculationLabel.grid(row=3, column=1, rowspan=1, columnspan=2)
 BMIVar.set("")
 
 clearButton = Button(root, text="Clear", command=clearCallback)
