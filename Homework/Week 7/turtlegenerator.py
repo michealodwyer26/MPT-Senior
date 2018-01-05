@@ -33,72 +33,96 @@ lengthStr = StringVar()
 lengthEntry = Entry(root, textvariable = lengthStr)
 lengthEntry.grid(row = 2, column =1, columnspan = 2)
 
+# function to reset and clear the screen
+def reset_screen():
+    screen.reset()
+    pen.speed(0)
+    pen.color('blue')
+    pen.width(3)
+    
 # button widgets
 
 def clearF():
     # clear the entry-s
     orderStr.set("")
     lengthStr.set("")
-    
+    reset_screen()
     return
 
 
 clearButton = Button(root, text = "Clear", command = clearF)
 clearButton.grid(row = 3, column = 1)
 
-def treeF():
-    order  = int(orderStr.get())
+def gasketF():
+    order = int(orderStr.get())
     length = float(lengthStr.get())
-    turtlegraphics.tree(order, length, pen)
+    
+    
+    
+    return
+    
+def kochF():
+    order = int(orderStr.get())
+    length = float(lengthStr.get())
+    
+    
+    
+    return
+    
+def tree4F():
+    order = int(orderStr.get())
+    length = float(lengthStr.get())
+    
+    
     
     return
 
-treeButton = Button(root, text = "Tree", command = treeF)
-treeButton.grid(row = 1, column = 3)
-
-def gasketF():
-	order = int(orderStr.get())
-	length = float(lengthStr.get())
-	
-	turtlegraphics.gasket(order, length, pen)
-	
-	return
-	
-gasketButton = Button(root, text="Gasket", command = gasketF)
-gasketButton.grid(row=2, column=3)
-
-def kochF():
-	order = int(orderStr.get())
-	length = float(lengthStr.get())
-	
-	turtlegraphics.k(order, length, pen)
-	
-	return
-	
-kochButton = Button(root, text="Koch", command=kochF)
-kochButton.grid(row=3, column=3)
-
-def tree4F():
-	order = int(orderStr.get())
-	length = float(lengthStr.get())
-	
-	turtlegraphics.tree4(order, length, pen)
-	
-	return
-
-tree4Button = Button(root, text="Tree 4", command=tree4F)
-tree4Button.grid(row=4, column=3)
-
 def flakeF():
-	order = int(orderStr.get())
-	length = float(lengthStr.get())
-	
-	turtlegraphics.flake(order, length, pen)
-	
-	return
+    order = int(orderStr.get())
+    length = float(lengthStr.get())
+    
+    
+    
+    return
+    
+def draw():
+    items = listbox.curselection()
+    
+    selected_item = items[0]
+    
+    order  = int(orderStr.get())
+    length = float(lengthStr.get())
+    
+    if selected_item == figures.index("Tree"):
+        turtlegraphics.tree(order, length, pen)
+        
+    elif selected_item == figures.index("Gasket"):
+        turtlegraphics.gasket(order, length, pen)
+        
+    elif selected_item == figures.index("Koch"):
+        turtlegraphics.k(order, length, pen)
+    
+    elif selected_item == figures.index("Tree4"):
+        turtlegraphics.tree4(order, length, pen)
+        
+    elif selected_item == figures.index("Flake"):
+        turtlegraphics.flake(order, length, pen)
+        
+    return
 
-flakeButton = Button(root, text="Flake", command=tree4F)
-flakeButton.grid(row=5, column=3)
+
+drawButton = Button(root, text="Draw", command=draw)
+drawButton.grid(column=3, row=3)
+
+# list widget
+
+listbox = Listbox(root)
+listbox.grid(row=1, column=3, rowspan = 2)
+
+figures = ["Tree", "Gasket", "Koch", "Tree4", "Flake"]
+
+for figure in figures:
+    listbox.insert(END, figure)
 
 # make a screen and a pen
 pen = Pen()
