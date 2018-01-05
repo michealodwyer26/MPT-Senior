@@ -52,38 +52,6 @@ def clearF():
 
 clearButton = Button(root, text = "Clear", command = clearF)
 clearButton.grid(row = 3, column = 1)
-
-def gasketF():
-    order = int(orderStr.get())
-    length = float(lengthStr.get())
-    
-    
-    
-    return
-    
-def kochF():
-    order = int(orderStr.get())
-    length = float(lengthStr.get())
-    
-    
-    
-    return
-    
-def tree4F():
-    order = int(orderStr.get())
-    length = float(lengthStr.get())
-    
-    
-    
-    return
-
-def flakeF():
-    order = int(orderStr.get())
-    length = float(lengthStr.get())
-    
-    
-    
-    return
     
 def draw():
     items = listbox.curselection()
