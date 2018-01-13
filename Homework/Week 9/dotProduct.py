@@ -36,23 +36,16 @@ def getSum(l):
 	
 def calculateDotProduct(a, b):
 	c = []
-	
 	n = len(a)
 		
 	for i in range(n):
 		c.append(a[i]* b[i]) 
-		
-	print("c = ", c)
 	
 	s = getSum(c)
-	
 	return s
-	
-	
 	
 def main():
 	n = int(input("n = "))
-	
 	a, b = readLists(n)
 	
 	s = calculateDotProduct(a, b)
@@ -60,6 +53,4 @@ def main():
 	print(s)
 	
 main()
-	
-		
-	
+
