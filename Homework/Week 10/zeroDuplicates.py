@@ -21,4 +21,5 @@ def zeroDupes():
 			print(numbers[i], end=" ")
 		else:
 			print("0", end=" ")
+
 zeroDupes()
