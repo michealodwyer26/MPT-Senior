@@ -1,0 +1,81 @@
+ * {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	padding: 10px;
+	font-family: 'Agency FB';
+}
+
+h1 {
+	font-weight: bold;
+	color: #0ff;
+	background: rgb(125, 0, 125)
+}
+
+section {
+	padding: 20px;
+	font-size: 14pt;
+}
+
+header {
+	font-size: 18pt;
+	font-weight: bold;
+	color: rbg(200, 200, 200);
+}
+
+article {
+	margin-top: 25px;
+	padding-bottom: 15px;
+	border-bottom: 2px solid rbga(150, 35, 35, .5);
+}
+
+footer {
+	padding-top: 15px;
+	background: #0ff;
+	color: #fff;
+	border-bottom: 2px dash rgba(150, 35, 35, .5);
+}
+
+.blogpost {
+	padding: 25px;
+	padding-right: 150px;
+	border-left-style: dotted;
+}
+
+.blogpost header {
+	font-size: 22pt;
+	color: rgb(35, 150, 35);
+	text-align: center;
+}
+
+.blogpost .author {
+	font-weight: bold;
+	color: rgb(150, 35, 150);
+	padding-left: 20px;
+}
+
+#anim_section{
+	border-left: 3px dashed rgb(150, 35, 150);
+}
+
+#anim_section header {
+	background: rgb(150, 35, 150);
+	color: #fff;
+	padding: 15px;
+	font-size: 24pt;
+	border: 0px solid #fff;
+	border-radius: 30px;
+	width: 300px;
+}
+
+#anim_section header:hover{
+	animation-name: animate_section;
+	animation-duration: 2s;
+}
+
+@keyframes animate_section{
+	from{width: 300px;}
+	to{width: 650px;}
+}
